@@ -8,6 +8,8 @@
 
 - **Descoberta de Repositórios:** Busca automaticamente repositórios públicos de um usuário específico do GitHub.
 - **Avaliação Técnica:** Analisa a complexidade do código, algoritmos e a saúde do repositório.
+
+## 🚀 Funcionalidades Futuras (Em desenvolvimento)
 - **Resumos com IA:** Utiliza LLMs (como GPT) para fornecer resumos inteligentes sobre os objetivos do projeto.
 - **Visualização de Dados:** Gera relatórios sobre a distribuição de linguagens e atividade de contribuidores.
 
@@ -53,6 +55,9 @@ cd github_analyzer
 
 - **Repository Discovery:** Automatically fetches public repositories from a specific GitHub user.
 - **Technical Assessment:** Analyzes code complexity, algorithms, and repository health.
+
+## 🚀 Future Features (In progress)
+
 - **AI-Powered Summaries:** Utilizes LLMs (like GPT) to provide intelligent summaries of project purposes.
 - **Data Visualization:** Generates reports on language distribution and contributor activity.
 
