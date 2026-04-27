@@ -52,3 +52,36 @@ def get_repos(username):
         page += 1
 
     return all_repos
+
+def get_user_events(username):
+    events = []
+    page = 1
+
+    while True:
+        url = f"{BASE_URL}/users/{username}/events"
+        params = {
+            "per_page": 100,
+            "page": page
+        }
+
+        response = requests.get(url, headers=HEADERS, params=params)
+
+        if response.status_code != 200:
+            return {"error": response.json().get("message", "Error fetching events")}
+        
+        batch = response.json()
+
+        print(f"[CLIENT] Events page {page}: {len(batch)}")
+
+        if not batch:
+            break
+
+        events.extend(batch)
+        page += 1
+
+        if page > 3:
+            break
+    
+    print(f"[CLIENT] Total events fetched: {len(events)}")
+
+    return events
